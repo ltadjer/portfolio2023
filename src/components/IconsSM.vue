@@ -2,7 +2,7 @@
   <div id="icons-container">
     <div class="icon-container" v-for="ico in icons" :key="ico.alt">
       <a :href="ico.link" target="_blank">
-        <img class="icon" :src="ico.icon" :alt="ico.alt"/>
+        <img class="icon" :src="ico.icon" :alt="ico.alt" />
       </a>
     </div>
     <div class="vertical-line"></div>

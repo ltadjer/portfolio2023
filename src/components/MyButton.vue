@@ -2,8 +2,8 @@
   <div id="button">
     <div class="container-btn">
       <a :href="buttonLink" target="_blank">
-        {{ buttonText }} 
-        <img :src="buttonIcon" alt="buttonIcon"/> 
+        {{ buttonText }}
+        <img :src="buttonIcon" alt="buttonIcon" />
       </a>
     </div>
   </div>
@@ -24,7 +24,7 @@ export default {
     buttonIcon: {
       type: String,
       required: true,
-      default: "download.svg"
+      default: "download.svg",
     },
   },
 };

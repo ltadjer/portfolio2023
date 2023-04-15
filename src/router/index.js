@@ -1,23 +1,23 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import MentionsView from '../views/MentionsView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+import MentionsView from "../views/MentionsView.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'accueil',
-    component: HomeView
+    path: "/",
+    name: "accueil",
+    component: HomeView,
   },
   {
-    path: '/mentions-legales',
-    name: 'mentions',
+    path: "/mentions-legales",
+    name: "mentions",
     component: MentionsView,
-  }
-]
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
