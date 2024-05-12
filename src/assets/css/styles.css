@@ -25,6 +25,7 @@ img {
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--backgroundColor);
 }
 body,
 p,
@@ -34,7 +35,7 @@ h2 {
 }
 
 body {
-  background-color: transparent;
+  background-color: var(--backgroundColor);
   color: var(--colorText);
   font-family: "Montserrat", sans-serif;
   background: url(../img/background.jpg);
@@ -42,6 +43,13 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: bottom;
+}
+
+@media all and (max-width: 768px) {
+  body {
+    background: url(../img/background-m.jpg);
+    background-position: left;
+  }
 }
 
 /* barre de défilement verticale */
@@ -332,7 +340,7 @@ h1,
   border-radius: 8px;
   /* padding: 1.625rem 1.125rem; */
   max-width: 528px;
-  background-color: var(--backgroundColor);
+  background-color: transparent;
 }
 
 #cardProject h2,
@@ -606,6 +614,7 @@ h1,
   line-height: 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 }
 

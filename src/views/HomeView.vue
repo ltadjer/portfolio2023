@@ -36,33 +36,21 @@
         </div>
         <div class="container-content">
           <p>
-            Depuis toujours, l'Informatique m'a passionnée. C'est la raison pour
-            laquelle j'ai choisi de suivre une
-            <span>Licence en Informatique</span> à l'Université de Bordeaux à la
-            suite de mon baccalauréat.
+            Depuis toujours, l'informatique est ma passion. C'est pourquoi j'ai choisi de suivre une <span>Licence en Informatique</span> à l'Université de Bordeaux juste après l'obtention de mon baccalauréat.
           </p>
           <p>
-            Cependant, il y a plus d'un an, j'ai décidé de me spécialiser dans
-            le domaine du <span>Développement Web</span>. C'est ainsi que j'ai
-            intégré Digital Campus pour suivre un
-            <span>Bachelor en Développement Web</span>, tout en étant
-            <span>alternante chez L'Atelier des Dames</span> en tant que
-            développeuse web.
+            Cependant, il y a un peu plus d'un an, j'ai décidé de me spécialiser dans le domaine du <span>Développement Web</span>. J'ai intégré Digital Campus pour poursuivre un <span>Bachelor dans ce domaine</span>, tout en étant en alternance chez L'Atelier des Dames en tant que développeuse.
           </p>
           <p>
-            Aujourd'hui, mon objectif est de poursuivre mon apprentissage à
-            travers une <span>alternance</span> dans le cadre d'un
-            <span>mastère Développement Web</span>.
+            Actuellement, je suis en <span>première année de mastère Tech Lead</span> chez Archi-lid, tout en occupant le poste d'alternante en tant que développeuse full stack. Mon objectif principal est de continuer à enrichir mes compétences et à acquérir de nouvelles connaissances, notamment à travers cette expérience en alternance.
           </p>
-          <p>
-            Si vous avez une opportunité à me proposer, je serais ravie de
-            rejoindre votre entreprise.
-          </p>
+
+            <p>Si vous avez une opportunité correspondant à mon profil, je serais ravie de rejoindre votre entreprise.</p>
         </div>
       </div>
       <div class="container-skills">
         <div class="skills-content">
-          <marquee behavior="alternate"
+          <marquee behavior="alternate" scrolldelay="20"
             ><span v-for="(skill, index) in skills" :key="index">
               {{ skill }}</span
             ></marquee
@@ -77,17 +65,9 @@
       </div>
       <div class="projects">
         <card-project
-          :project="project1"
-          data-aos="fade-right"
-          data-aos-duration="1500"
-        />
-        <card-project
-          :project="project2"
-          data-aos="fade-right"
-          data-aos-duration="1500"
-        />
-        <card-project
-          :project="project3"
+          v-for="(project, index) in projects"
+          :key="index"
+          :project="project"
           data-aos="fade-right"
           data-aos-duration="1500"
         />
@@ -136,6 +116,9 @@ import "aos/dist/aos.css"
 import CardProject from "../components/CardProject.vue"
 import MyButton from "../components/MyButton.vue"
 import TheTimeline from "../components/Timeline.vue"
+import iconDownload from "@/assets/icons/download.svg"
+import iconSend from "@/assets/icons/send.svg"
+
 export default {
   name: "HomeView",
   components: {
@@ -145,66 +128,88 @@ export default {
   },
   data() {
     return {
-      iconDownload: require("@/assets/icons/download.svg"),
-      iconSend: require("@/assets/icons/send.svg"),
+      iconDownload: iconDownload,
+      iconSend: iconSend,
       skills: [
         "CSS",
-        "SCSS",
-        "HTML",
+        "Tailwind CSS",
         "PHP",
-        "Javascript",
+        "JS",
+        "TS",
         "GitHub",
-        "Shopify",
-        "Liquid",
-        "Wordpress",
-        "Strapi",
         "Node JS",
         "Express JS",
-        "Pug",
+        "Nest JS",
         "Vue JS",
+        "Ionic",
         "Symfony",
-        "Twig",
+        "Shopify",
+        "Wordpress",
+        "Strapi",
         "Suite Adobe"
       ],
-      project1: {
-        src: require("@/assets/projects/add.png"),
-        slug: "projet-1",
-        title: "L'Atelier des Dames",
-        description:
-          "Actuellement en alternance chez l'Atelier des Dames, j'ai pu effectué une migration d'un Woocommerce vers Shopify et je continue à gérer le site en fonction du besoin.",
-        languages: ["Shopify", "Liquid", "CSS"],
-        website: {
-          icon: require("@/assets/icons/external-link.svg"),
-          link: "https://latelierdesdames.fr/",
-          alt: "L'Atelier des Dames",
+      projects: [
+        {
+          src: require("@/assets/projects/archi-lid.jpeg"),
+          title: "Archi-lid",
+          description:
+            "Actuellement en alternance chez Archi-lid, je participe à l'intégration de fonctionnalités sur une application mobile de gestion de suivi de chantier, mais également dans la plateforme web pour améliorer l'expérience utilisateur.",
+          languages: ["Vue JS", "Ionic", "Symfony", "JQuery"],
         },
-      },
-      project2: {
-        src: require("@/assets/projects/bordeauxfood.png"),
-        slug: "projet-2",
-        title: "Bordeaux Food",
-        description:
-          "Dans le cadre des Grands Projets de Digital Campus, j'ai participé à la refonte du site Bordeaux Food, un site de podcasts de découvertes culinéaires.",
-        languages: ["WordPress", "Thème personnalisé", "PHP", "CSS"],
-        website: {
-          icon: require("@/assets/icons/external-link.svg"),
-          link: "https://bordeauxfood.fr/",
-          alt: "Lien site web",
+        {
+          src: require("@/assets/projects/add.png"),
+          title: "L'Atelier des Dames",
+          description:
+            "Au cours d'une alternance chez l'Atelier des Dames, j'ai pu effectué une migration d'un Woocommerce vers Shopify et je continue à gérer le site en fonction du besoin.",
+          languages: ["Shopify", "Liquid", "CSS"],
+          website: {
+            icon: require("@/assets/icons/external-link.svg"),
+            link: "https://latelierdesdames.fr/",
+            alt: "L'Atelier des Dames",
+          },
         },
-      },
-      project3: {
-        src: require("@/assets/projects/adlink.png"),
-        slug: "projet-2",
-        title: "Adlink.bio",
-        description:
-          "Projet scolaire de groupe qui consiste à développer une platefrome CMS permettant aux utilisateurs de créer des landing page en fonction de ces besoins.",
-        languages: ["Symfony", "PHP", "SCSS"],
-        github: {
-          icon: require("@/assets/icons/github-p.svg"),
-          link: "https://github.com/ltadjer/adlink.bio",
-          alt: "Lien Github",
+        {
+          src: require("@/assets/projects/bordeauxfood.png"),
+          title: "Bordeaux Food",
+          description:
+            "Dans le cadre des Grands Projets de Digital Campus, j'ai participé à la refonte du site Bordeaux Food, un site de podcasts de découvertes culinéaires.",
+          languages: ["WordPress", "Thème personnalisé", "PHP", "CSS"],
+          website: {
+            icon: require("@/assets/icons/external-link.svg"),
+            link: "https://bordeauxfood.fr/",
+            alt: "Lien site web",
+          },
         },
-      },
+        {
+          src: require("@/assets/projects/adlink.png"),
+          title: "Adlink.bio",
+          description:
+            "Projet scolaire de groupe qui consiste à développer une platefrome CMS permettant aux utilisateurs de créer des landing page en fonction de ces besoins.",
+          languages: ["Symfony", "PHP", "SCSS"],
+          github: {
+            icon: require("@/assets/icons/github-p.svg"),
+            link: "https://github.com/ltadjer/adlink.bio",
+            alt: "Lien Github",
+          },
+        },
+        {
+          src: require("@/assets/projects/portfolio.png"),
+          title: "Portfolio",
+          description:
+            "Dans le cadre de ma recherche d'alternance pour mon mastère, j'ai réalisé mon portfolio pour mettre en avant mes compétences et projets. ",
+          languages: ["VueJS", "JAVASCRIPT", "CSS"],
+          website: {
+            icon: require("@/assets/icons/external-link.svg"),
+            link: "https://liticia.fr/",
+            alt: "Lien portfolio",
+          },
+          github: {
+            icon: require("@/assets/icons/github-p.svg"),
+            link: "https://github.com/ltadjer/portfolio2023",
+            alt: "Lien Github",
+          },
+        },
+      ]
     };
   },
   mounted() {

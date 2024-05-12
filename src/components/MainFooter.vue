@@ -18,8 +18,8 @@
       </div>
     </div>
     <p class="text-center">
-      © 2023 • Litica Tadjer • Designé et developpé avec 🤍 •
-      <a href="/mentions-legales">Mentions légales</a>
+      © 2023 • Litica Tadjer • Designé et développé avec 🤍 •
+      <RouterLink to="/mentions-legales">Mentions légales</RouterLink>
     </p>
   </div>
 </template>

@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import MainHeader from "./components/MainHeader.vue";
-import MainFooter from "./components/MainFooter.vue";
-import IconsSm from "./components/IconsSM.vue";
-import "./assets/css/styles.css";
+import MainHeader from "./components/MainHeader.vue"
+import MainFooter from "./components/MainFooter.vue"
+import IconsSm from "./components/IconsSM.vue"
+import "./assets/css/styles.css"
 
 export default {
   name: "App",
