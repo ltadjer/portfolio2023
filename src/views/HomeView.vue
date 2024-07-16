@@ -36,16 +36,31 @@
         </div>
         <div class="container-content">
           <p>
-            Depuis toujours, l'informatique est ma passion. C'est pourquoi j'ai choisi de suivre une <span>Licence en Informatique</span> à l'Université de Bordeaux juste après l'obtention de mon baccalauréat.
+            Depuis toujours, l'informatique est ma passion. C'est pourquoi j'ai
+            choisi de suivre une <span>Licence en Informatique</span> à
+            l'Université de Bordeaux juste après l'obtention de mon
+            baccalauréat.
           </p>
           <p>
-            Cependant, il y a un peu plus d'un an, j'ai décidé de me spécialiser dans le domaine du <span>Développement Web</span>. J'ai intégré Digital Campus pour poursuivre un <span>Bachelor dans ce domaine</span>, tout en étant en alternance chez L'Atelier des Dames en tant que développeuse.
+            Cependant, il y a un peu plus d'un an, j'ai décidé de me spécialiser
+            dans le domaine du <span>Développement Web</span>. J'ai intégré
+            Digital Campus pour poursuivre un
+            <span>Bachelor dans ce domaine</span>, tout en étant en alternance
+            chez L'Atelier des Dames en tant que développeuse.
           </p>
           <p>
-            Actuellement, je suis en <span>première année de mastère Tech Lead</span> chez Archi-lid, tout en occupant le poste d'alternante en tant que développeuse full stack. Mon objectif principal est de continuer à enrichir mes compétences et à acquérir de nouvelles connaissances, notamment à travers cette expérience en alternance.
+            Actuellement, je suis en
+            <span>première année de mastère Tech Lead</span> chez Archi-lid,
+            tout en occupant le poste d'alternante en tant que développeuse full
+            stack. Mon objectif principal est de continuer à enrichir mes
+            compétences et à acquérir de nouvelles connaissances, notamment à
+            travers cette expérience en alternance.
           </p>
 
-            <p>Si vous avez une opportunité correspondant à mon profil, je serais ravie de rejoindre votre entreprise.</p>
+          <p>
+            Si vous avez une opportunité correspondant à mon profil, je serais
+            ravie de rejoindre votre entreprise.
+          </p>
         </div>
       </div>
       <div class="container-skills">
@@ -110,14 +125,14 @@
 </template>
 
 <script>
-import AOS from "aos"
-import "aos/dist/aos.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import CardProject from "../components/CardProject.vue"
-import MyButton from "../components/MyButton.vue"
-import TheTimeline from "../components/Timeline.vue"
-import iconDownload from "@/assets/icons/download.svg"
-import iconSend from "@/assets/icons/send.svg"
+import CardProject from "../components/CardProject.vue";
+import MyButton from "../components/MyButton.vue";
+import TheTimeline from "../components/Timeline.vue";
+import iconDownload from "@/assets/icons/download.svg";
+import iconSend from "@/assets/icons/send.svg";
 
 export default {
   name: "HomeView",
@@ -146,9 +161,39 @@ export default {
         "Shopify",
         "Wordpress",
         "Strapi",
-        "Suite Adobe"
+        "Suite Adobe",
       ],
       projects: [
+        {
+          src: require("@/assets/projects/kitui.png"),
+          title: "KitUI",
+          description:
+            "Projet scolaire en groupe visant à développer un outil permettant de paramétrer un Kit UI personnalisé à l'image du client via une interface web réactive. Utilise le framework Vue.js et produit un fichier CSS dynamique via un serveur Node.js selon les paramètres graphiques de l'utilisateur.",
+          languages: ["VueJS", "ExpressJS", "TalwindCSS"],
+          github: {
+            icon: require("@/assets/icons/github-p.svg"),
+            link: "https://github.com/laura-lpn/kitUI",
+            alt: "Lien Github",
+          },
+        },
+        {
+          src: require("@/assets/projects/popin-locker.png"),
+          title: "Pop'in Locker",
+          description:
+            "J'ai eu l'opportunité de collaborer avec Pop'in Locker pour la création de leur site internet, en utilisant un thème WordPress personnalisé. Pop'in Locker propose un service de consigne à bagages automatisée et sécurisée, situé au centre de Bordeaux.",
+          languages: [
+            "WordPress",
+            "Thème personnalisé",
+            "PHP",
+            "CSS",
+            "JavaScript",
+          ],
+          website: {
+            icon: require("@/assets/icons/external-link.svg"),
+            link: "https://popin-locker.com/",
+            alt: "Pop'in Locker",
+          },
+        },
         {
           src: require("@/assets/projects/archi-lid.jpeg"),
           title: "Archi-lid",
@@ -192,24 +237,7 @@ export default {
             alt: "Lien Github",
           },
         },
-        {
-          src: require("@/assets/projects/portfolio.png"),
-          title: "Portfolio",
-          description:
-            "Dans le cadre de ma recherche d'alternance pour mon mastère, j'ai réalisé mon portfolio pour mettre en avant mes compétences et projets. ",
-          languages: ["VueJS", "JAVASCRIPT", "CSS"],
-          website: {
-            icon: require("@/assets/icons/external-link.svg"),
-            link: "https://liticia.fr/",
-            alt: "Lien portfolio",
-          },
-          github: {
-            icon: require("@/assets/icons/github-p.svg"),
-            link: "https://github.com/ltadjer/portfolio2023",
-            alt: "Lien Github",
-          },
-        },
-      ]
+      ],
     };
   },
   mounted() {
